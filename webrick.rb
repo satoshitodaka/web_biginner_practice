@@ -26,7 +26,7 @@ end
 
 server.mount_proc('/form_post') do | req, res|
   data = req.query
-  body = "<html><head><meta charset='utf-8'></head><body>クエリパラメータは#{data}です。<br>こんにちは#{data['username']}さん。あなたの年齢は#{data['age']}歳ですね。</body></html>"
+  body = "<html><head><meta charset='utf-8'></head><body>フォームデータは#{data}です。<br>こんにちは#{data['username']}さん。あなたの年齢は#{data['age']}歳ですね。</body></html>"
   res.status = 200
   res['Content-Type'] = 'text/html'
   res.body = body
